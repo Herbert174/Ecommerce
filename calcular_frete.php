@@ -45,7 +45,7 @@
 
 	$url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?nCdEmpresa=&sDsSenha=&sCdAvisoRecebimento=n&sCdMaoPropria=n&nVlValorDeclarado=0&nVlDiametro=0&StrRetorno=xml&nIndicaCalculo=3&".$retorno_produto;
 
-	$unparsedResult = file_get_contents($url);
+	$unparsedResult = file_get_contents($url); //Recupera api utilizando file_get_contents
 	$parsedResult = simplexml_load_string($unparsedResult);
 
 	$retorno = array
