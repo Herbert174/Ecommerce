@@ -229,7 +229,7 @@
                                             <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
                                         </div>
                 
-                                        <button type="buttom" class="btn btn-primary btn-custom1" id="btn_login">Entrar</button>
+                                        <button type="buttom" class="btn btn-custom1" id="btn_login">Entrar</button>
 
                                         <br/><br/>               
                                     </form>
@@ -276,7 +276,7 @@
         </nav>
 
         <div class="modal fade" id="modal-mensagem">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
@@ -285,7 +285,7 @@
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-9">
                                 <h3 class="titulo1">Itens no carrinho</h3>
                             </div>
                         </div>

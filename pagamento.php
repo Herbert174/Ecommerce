@@ -53,30 +53,43 @@
 					let formSerialized = $('#formDestino').serialize();
 					$.post('calcular_frete', formSerialized, function(resultado)
 						{
-						resultado = JSON.parse(resultado);
-						let valorFrete = resultado.preco;
-						let prazoEntrega = resultado.prazo;
+						//resultado = JSON.parse(resultado);
+						//let valorFrete = resultado.preco;
+						//let prazoEntrega = resultado.prazo;
 						//é necessario utilizar a aspas dessa forma ` por uma questão de sintax do javascript
-						$('#resultado').html(`Frete: <span class="direita"><b>R$ ${valorFrete} </b></span><br><br> Prazo de entrega: <span class="direita"><b>${prazoEntrega} dias úteis</b></span>`);
-                        $.ajax({
-                                url: 'atualiza_preco_total',
-                                success: function(data)
-                                    {
-                                    $('#valor_total').html(data);
-                                    }
-                              });
 
-                        $.ajax({
-                                url: 'api_pagseguro',
-                                success: function(data)
-                                    {
-                                    $('#btn_compra').html(data);
-                                    }
-                              });
-						});
+						$('#fretes').html(resultado);
+                        $('#modal-fretes').modal('show');
+                        
+                        //Será executado após cliente selecionar um dos fretes disponiveis
+                        $('.escolhaFrete').click(function() 
+	                        {
+                            var servico = $(this).data('nomeServico');
+                            var prazo = $(this).data('prazo');
+                            var preco = $(this).data('preco');
+                            $.ajax({
+                                    url: 'api_pagseguro',
+                                    method: 'post',
+                                    data: {servicoPost: servico, prazoPost: prazo, precoPost: preco},
+                                    success: function(data)
+                                        {
+                                        $('#modal-fretes').modal('hide');
+                                        $('#btn_compra').html(data);
+                                        $.ajax({
+                                            url: 'atualiza_preco_total',
+                                            success: function(data)
+                                                {
+                                                $('#valor_total').html(data);
+                                                }
+                                        });
+                                        }
+                                });
+						    });
+                        });
                     $('#modal-endereco').modal('hide');
                     
 					});
+                    
 	            $.ajax({
                         url: 'consulta_carrinho1',
                         success: function(data)
@@ -178,7 +191,7 @@
                                             <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
                                         </div>
                 
-                                        <button type="buttom" class="btn btn-primary btn-custom1" id="btn_login">Entrar</button>
+                                        <button type="buttom" class="btn btn-custom1" id="btn_login">Entrar</button>
 
                                         <br /><br />                
                                     </form>
@@ -335,6 +348,29 @@
         </div>
         </div>
 
+        <div class="modal fade" id="modal-fretes">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    <h3 class="modal-title">Opções de frete disponiveis</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div id="fretes"></div>
+                            </div>
+                        </div>
+                    </div>                                             
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
         <section id="conteudo">
         	<div class="container">
         		<div class="row">
@@ -344,7 +380,13 @@
                                 <div class="col-md-8">
 	        					    <h2>Selecione o endereço de entrega</h2>
                                     <button class="btn btn-default" type="button" data-toggle="modal" data-target="#modal-endereco">Endereço</button>
+                                    <br><br>
                                 </div>
+							</div>
+                            <div class="row">
+								<div class="col-md-12">
+                                    <span id="resultado"></span>
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-12">
@@ -365,7 +407,7 @@
         					<p>Peso limite por compra 30kg</p>
         					<p>A soma máxima das dimensões da embalagem é de no máximo 200cm (comprimento + largura + altura), acima disso será necessario realizar o pedido do restantes dos produtos em uma nova compra</p>
         					<div><button class="btn btn-default btn-block botao"><a href = "index">Continuar comprando</a></button></div>
-        					<br><div><p id="btn_compra"></p></div>
+        					
         				</div>
         			</div>
         		</div>

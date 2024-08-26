@@ -61,7 +61,7 @@
 	                echo '<img class="img-responsive img-custom3" src="'.$imagem_produto.'">';
 	                echo '<br>';
 	                echo '</div>';
-	                echo '<div class="col-md-3">';
+	                echo '<div class="col-md-6">';
 	                echo '<h4>'.$nome_produto.'</h4>';
 	                echo '<p>'.$resumo_produto.'</p>';
 	                echo '<p><span class="negrito">Valor: '.$preco_produto1.'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A unidade</p>';

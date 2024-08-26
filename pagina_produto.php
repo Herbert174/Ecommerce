@@ -10,7 +10,7 @@
     $preco_bruto    = $_SESSION['preco'];
     $resumo         = $_SESSION['resumo'];
     $imagem         = $_SESSION['imagem'];
-    $valor          = $_SESSION['valor'];
+    $valor          = isset($_SESSION['valor']) ? $_SESSION['valor'] : 0;
     $avaliacoes     = $_SESSION['avaliacoes'];
     $num_avaliacoes = $_SESSION['num_avaliacoes'];
     $info_tec       = $_SESSION['info_tec'];
@@ -228,7 +228,7 @@
                                             <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
                                         </div>
                 
-                                        <button type="buttom" class="btn btn-primary btn-custom1" id="btn_login">Entrar</button>
+                                        <button type="buttom" class="btn btn-custom1" id="btn_login">Entrar</button>
   
                                         <br /><br />                
                                     </form>
@@ -393,7 +393,7 @@
                             <p class="negrito">R$ <?=$preco?></p>
                             <p>Em até 18x de <span class="negrito">R$ <?=$parcela?></span> sem juros no cartão Ou em 1x no cartão com até <span class="negrito">10% OFF</span></p>
                             <p>Quantidade no estoque: <?= $qntd_estoque ?>un.</p>
-                            <button class="btn btn-primary btn-lg btn-custom1" id="comprar">Comprar</button>
+                            <button class="btn btn-lg btn-custom1" id="comprar">Comprar</button>
                             <h3>Avalie</h3>
                             <?php 
                                 if(isset($_SESSION['erro_avalie']))

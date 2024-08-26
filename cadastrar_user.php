@@ -120,7 +120,7 @@
                                             <input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
                                         </div>
                 
-                                        <button type="buttom" class="btn btn-primary btn-custom1" id="btn_login">Entrar</button>
+                                        <button type="buttom" class="btn btn-custom1" id="btn_login">Entrar</button>
 
                                         <br /><br />                
                                     </form>
