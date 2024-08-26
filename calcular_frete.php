@@ -3,6 +3,7 @@
 	require_once('vendor/autoload.php');
 
 	session_start();
+	//Aquele ajuste pra desbugar possivelmente
 
 	$comprimento_produto = $_SESSION['comprimento_produto'];
 	$altura_produto      = $_SESSION['altura_produto'];
