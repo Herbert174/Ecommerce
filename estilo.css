@@ -108,10 +108,11 @@ body{background-color: rgb(236, 235, 235);}
 
 @media screen and (max-width: 767px)
 	{
-	.img-custom{height: 420px;}
+	.img-custom{height: 380px;}
 	.div_custom{height: 210px; margin-top: 50px;}
 	.tamanho{margin-bottom: 130px;}
 	.img-custom1{height: 420px; padding-bottom: 8px;}
+	.img-custom2{height: 370px;}
 	.img-custom4{height: 420px;}
 	#img1{height: 350px;}
 	#img2{height: 350px;}
@@ -127,6 +128,7 @@ body{background-color: rgb(236, 235, 235);}
 	#img3{height: 350px;}
 	.tamanho{margin-bottom: 70px;}
 	.img-custom1{height: 350px; padding-bottom: 8px;}
+	.img-custom2{height: 400px;}
 	.img-custom4{height: 350px;}
 	}
 
