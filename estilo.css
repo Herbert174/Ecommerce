@@ -149,3 +149,15 @@ body{background-color: rgb(236, 235, 235);}
 	.div_custom{height: 380px;}
 	.img-custom{height: 200px;}
 	}
+
+@media screen and (min-width: 1500px)
+	{
+	.div_custom{height: 480px;}
+	.img-custom{height: 200px;}
+	}
+
+@media screen and (min-width: 1800px)
+	{
+	.div_custom{height: 520px;}
+	.img-custom{height: 200px;}
+	}
