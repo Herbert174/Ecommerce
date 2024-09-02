@@ -49,6 +49,7 @@ body{background-color: rgb(236, 235, 235);}
 .img-custom2{height: 400px; width: 100%;}
 .img-custom3{height: 250px; width: 100%;}
 .img-custom4{height: 210px; width: 100%;}
+.img-custom5{height: 35px; width: 100%;}
 .img-produto {overflow: hidden;}
 .img-produto img{
   max-width: 100%;
@@ -117,6 +118,7 @@ body{background-color: rgb(236, 235, 235);}
 	#img1{height: 350px;}
 	#img2{height: 350px;}
 	#img3{height: 350px;}
+	.img-custom5{height: 35px; width: 30%;}
 	}
 
 @media screen and (min-width: 768px)
@@ -136,7 +138,7 @@ body{background-color: rgb(236, 235, 235);}
 /* 170% Tela 1366 x 768 */
 @media screen and (min-width: 796px)
 	{
-
+	.img-custom5{height: 35px; width: 100%;}
 	}
 
 /* 160% Tela 1366 x 768 */

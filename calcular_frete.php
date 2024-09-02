@@ -94,7 +94,7 @@
 			{
 			$retorno_lista .= '<div class="row">';
 			$retorno_lista .= '<div class="col-sm-2">';
-			$retorno_lista .= '<img src="'.$fotoEntregadora.'" height="35px" width="100%">';
+			$retorno_lista .= '<img class="img-custom5" src="'.$fotoEntregadora.'">';
 			$retorno_lista .= '</div>';
 			$retorno_lista .= '<div class="col-sm-3">';
 			$retorno_lista .= '<span>'.$nomeServico.'</span>';
