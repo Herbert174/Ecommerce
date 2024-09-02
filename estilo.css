@@ -130,6 +130,7 @@ body{background-color: rgb(236, 235, 235);}
 	.img-custom1{height: 350px; padding-bottom: 8px;}
 	.img-custom2{height: 400px;}
 	.img-custom4{height: 350px;}
+	.modal-lg .img-custom3{ width: 100%;}
 	}
 
 /* 170% Tela 1366 x 768 */
@@ -161,6 +162,10 @@ body{background-color: rgb(236, 235, 235);}
 	.tamanho{margin-bottom: 150px;}
 	.img-custom1{height: 370px; width: 100%; padding-bottom: 8px;}
 	.img-custom4{height: 370px; width: 100%;}
+	.modal-lg .img-custom3{width: 40%;}
+	.modal-lg p{margin-right: 180px;}
+	.modal-lg .titulo1{margin-right: 450px;}
+	.modal-lg .botao{width: 60%;}
 	}
 
 /* 130% Tela 1366 x 768 */
@@ -174,6 +179,10 @@ body{background-color: rgb(236, 235, 235);}
 	.nav-tabs a{font-size: 12px;}
 	.img-custom1{height: 210px; width: 100%; margin-bottom: 10px;}
 	.img-custom4{height: 210px; width: 100%;}
+	.modal-lg .img-custom3{ width: 100%;}
+	.modal-lg p{margin-right: 0px;}
+	.modal-lg .titulo1{margin-right: 0px;}
+	.modal-lg .botao{width: 100%;}
 	}
 
 /* 120% Tela 1366 x 768 */
