@@ -49,7 +49,8 @@ body{background-color: rgb(236, 235, 235);}
 .img-custom2{height: 400px; width: 100%;}
 .img-custom3{height: 250px; width: 100%;}
 .img-custom4{height: 210px; width: 100%;}
-.img-custom5{height: 35px; width: 100%;}
+.img-custom5{height: 40px; width: 80%;}
+.img-frete{height: 40px; width: 60%;}
 .img-produto {overflow: hidden;}
 .img-produto img{
   max-width: 100%;
@@ -69,6 +70,7 @@ body{background-color: rgb(236, 235, 235);}
 .estrelas label i.fa:before{content: '\f005'; color: rgb(253, 103, 48);}
 .estrelas input[type=radio]:checked ~ label i.fa:before{color: #CCC;}
 .tabela_custom{background-color: black; color: white;}
+.tabelaTamanhoCustom{width: 90%;}
 .azul{width: 100%; background-color: #2D4E7B;}
 .div_custom{background-image: url("imagens/capa4.jpg"); height: 380px; width: 100%; background-size: 100%;
 	opacity: 1.0; margin-bottom: 0px; margin-top: 0px; border-bottom: black solid 2px;
@@ -119,6 +121,7 @@ body{background-color: rgb(236, 235, 235);}
 	#img2{height: 350px;}
 	#img3{height: 350px;}
 	.img-custom5{height: 50px; width: 40%;}
+	.tabelaTamanhoCustom{width: 100%;}
 	}
 
 @media screen and (min-width: 768px)
@@ -139,6 +142,7 @@ body{background-color: rgb(236, 235, 235);}
 @media screen and (min-width: 796px)
 	{
 	.img-custom5{height: 35px; width: 100%;}
+	.tabelaTamanhoCustom{width: 70%;}
 	}
 
 /* 160% Tela 1366 x 768 */
@@ -150,7 +154,7 @@ body{background-color: rgb(236, 235, 235);}
 /* 150% Tela 1366 x 768 */
 @media screen and (min-width: 910px)
 	{
-
+	
 	}
 
 /* 140% Tela 1366 x 768 */
@@ -168,6 +172,7 @@ body{background-color: rgb(236, 235, 235);}
 	.modal-lg p{margin-right: 180px;}
 	.modal-lg .titulo1{margin-right: 450px;}
 	.modal-lg .botao{width: 60%;}
+	.tabelaTamanhoCustom{width: 70%;}
 	}
 
 /* 130% Tela 1366 x 768 */
@@ -185,6 +190,7 @@ body{background-color: rgb(236, 235, 235);}
 	.modal-lg p{margin-right: 0px;}
 	.modal-lg .titulo1{margin-right: 0px;}
 	.modal-lg .botao{width: 100%;}
+	.tabelaTamanhoCustom{width: 100%;}
 	}
 
 /* 120% Tela 1366 x 768 */
@@ -207,6 +213,7 @@ body{background-color: rgb(236, 235, 235);}
 	.custom1 span{font-size: 13px;}
 	.custom1 b{font-size: 13px;}
 	.nav-tabs a{font-size: 13px;}
+	.tabelaTamanhoCustom{width: 90%;}
 	}
 
 /* 100% Tela 1366 x 768 */

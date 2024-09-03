@@ -64,7 +64,7 @@
 	$fretes = json_decode($response->getBody()); //Objeto gettype($fretes)
 	
 	//echo $response->getBody();
-	$retorno_lista = '';
+	/*$retorno_lista = '';
 	$retorno_lista .= '<div class="row">';
 	$retorno_lista .= '<div class="col-sm-2">';
 	$retorno_lista .= '<span class="centro"></span>';
@@ -81,7 +81,22 @@
 	$retorno_lista .= '<div class="col-sm-2">';
 	$retorno_lista .= '<span class="centro">Ação</span>';
 	$retorno_lista .= '</div>';
-	$retorno_lista .= '</div><br>';
+	$retorno_lista .= '</div><br>';*/
+
+	$retorno_lista = '';
+	$retorno_lista .= '<table class="table table-hover tabelaTamanhoCustom">';
+	$retorno_lista .= '<thead class="tabela_custom">';
+	$retorno_lista .= '<tr>';
+	$retorno_lista .= '<th scope="col" colspan="1"></th>';
+	$retorno_lista .= '<th scope="col" colspan="1">Categoria</th>';
+	$retorno_lista .= '<th scope="col" colspan="1">Prazo</th>';
+	$retorno_lista .= '<th scope="col" colspan="1"><span class="centro1">Preço</span></th>';
+	$retorno_lista .= '<th scope="col" colspan="1"><span class="centro1">Ação</span></th>';
+	$retorno_lista .= '</tr>';
+	$retorno_lista .= '</thead>';
+	$retorno_lista .= '<tbody>';
+
+
 	
 	foreach($fretes as $frete)
 		{
@@ -92,7 +107,7 @@
 		$fotoEntregadora = isset($frete->company->picture) ? $frete->company->picture : null;
 		if($nomeServico && $preco && $prazo && $entregadora && $fotoEntregadora)
 			{
-			$retorno_lista .= '<div class="row">';
+			/*$retorno_lista .= '<div class="row">';
 			$retorno_lista .= '<div class="col-sm-2">';
 			$retorno_lista .= '<img class="img-custom5" src="'.$fotoEntregadora.'">';
 			$retorno_lista .= '</div>';
@@ -108,9 +123,17 @@
 			$retorno_lista .= '<div class="col-sm-2">';
 			$retorno_lista .= '<button class="btn btn-default escolhaFrete" data-servico="'.$nomeServico.'" data-prazo="'.$prazo.'" data-preco="'.$preco.'" type="button">Selecionar</button>';
 			$retorno_lista .= '</div>';
-			$retorno_lista .= '</div><br>';
+			$retorno_lista .= '</div><br>';*/
+
+			$retorno_lista .= '<tr><td><img class="img-frete" src="'.$fotoEntregadora.'"></td>';
+			$retorno_lista .= '<td><span>'.$nomeServico.'</span></td>';
+			$retorno_lista .= '<td><span>'.$prazo.' dia(s)</span></td>';
+			$retorno_lista .= '<td><span>R$: '.$preco.'</span></td>';
+			$retorno_lista .= '<td><button class="btn btn-default escolhaFrete" data-servico="'.$nomeServico.'" data-prazo="'.$prazo.'" data-preco="'.$preco.'" type="button">Selecionar</button></td></tr>';
 			}
 		}
+	$retorno_lista .= '</tbody>';
+
 	echo $retorno_lista;
 
 ?>
