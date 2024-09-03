@@ -6,7 +6,7 @@
 	$link = $objDb -> conecta_mysql();//Cria uma conexão com o banco de dados e armazena em link
 
 	$lista = [];//Cria um array para armazenar o resultado da leitura do banco de dados
-	$sql = " SELECT * FROM transacoes ";//Armazena em sql o codigo que será enviado para o banco de dados
+	$sql = " SELECT * FROM transacoes ORDER BY id_transacao DESC ";//Armazena em sql o codigo que será enviado para o banco de dados
 
 	if($resultado_lista = mysqli_query($link, $sql))/*Se conecta com o banco de dados e envia o codigo de sql
 													recuperando o retorno em resultado_lista*/

@@ -64,7 +64,7 @@
                         //Será executado após cliente selecionar um dos fretes disponiveis
                         $('.escolhaFrete').click(function() 
 	                        {
-                            var servico = $(this).data('nomeServico');
+                            var servico = $(this).data('servico');
                             var prazo = $(this).data('prazo');
                             var preco = $(this).data('preco');
                             $.ajax({

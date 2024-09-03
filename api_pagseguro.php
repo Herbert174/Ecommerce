@@ -14,7 +14,7 @@
     $valor = (float)$_SESSION['valor'];
     //$frete = (float)$_SESSION['preco_frete'];
 
-    //$servico = (string)$_POST['servicoPost'];
+    $servico = (string)$_POST['servicoPost'];
     $prazo = (float)$_POST['prazoPost'];
     $frete = (float)$_POST['precoPost'];
 
@@ -79,6 +79,7 @@
                     $JsonPreco = json_encode($preco_produto);
                     }
                 $paymentRequest->addItem($produto_id, $nome_produto, $produto_qntd, $preco_produto);
+                $lista_produtos .= "Nome: $nome_produto <br> Qntd: $produto_qntd <br> Preco unitário: $preco_produto <br><br>";
                 /*$produto = array(
                     "reference_id" => $JsonId,
                     "name" => $JsonNome,
@@ -258,10 +259,10 @@
     $paymentRequest->setReference($codigoReferencia);  
       
     // URL para onde o comprador será redirecionado (GET) após o fluxo de pagamento  
-    $paymentRequest->setRedirectUrl("https://hmsystem.online/index");
+    $paymentRequest->setRedirectUrl("https://ageofgames.com.br/Ecommerce/");
       
     // URL para onde serão enviadas notificações (POST) indicando alterações no status da transação  
-    $paymentRequest->addParameter('notificationURL', 'https://hmsystem.online/notificacoes_pagamentos.php');
+    $paymentRequest->addParameter('notificationURL', 'https://ageofgames.com.br/Ecommerce/notificacoes_pagamentos.php');
     try {
         $credentials = PagSeguroConfig::getAccountCredentials(); // getApplicationCredentials()  
         $checkoutUrl = $paymentRequest->register($credentials);  
@@ -276,7 +277,7 @@
 
     $_SESSION['link_pagseguro'] = $checkoutUrl; //url do checkout deverá ser guardado aqui
 
-    $sql = " INSERT INTO transacoes(codigo_referencia, id_usuario, valor_compra, nome_comprador, endereco, numero, complemento, bairro, cep, cidade, estado, pais, produtos) values('$codigoReferencia', '$id_usuario', '$valorcompra', '$usuario', '$rua', '$numero', '$complemento', '$bairro', '$cep', '$cidade', '$estado', '$pais', '$lista_produtos') ";
+    $sql = " INSERT INTO transacoes(codigo_referencia, id_usuario, valor_compra, nome_comprador, endereco, numero, complemento, bairro, cep, cidade, estado, pais, produtos, tipoFrete) values('$codigoReferencia', '$id_usuario', '$valorcompra', '$usuario', '$rua', '$numero', '$complemento', '$bairro', '$cep', '$cidade', '$estado', '$pais', '$lista_produtos', '$servico') ";
 
     if(mysqli_query($link, $sql))//Envia o codigo ao banco de dados, cadastrando as informações do produto enviado pelo usuario
 		{

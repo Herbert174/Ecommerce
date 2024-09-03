@@ -22,6 +22,7 @@
         $cidade = $lista['cidade'];
         $estado = $lista['estado'];
         $pais = $lista['pais'];
+        $tipoFrete = $lista['tipoFrete'];
 
         if($estado == "AC")
             {
@@ -221,6 +222,16 @@
             echo '</div>';
             echo '<div class="col-md-8">';
                 echo "<p>$cidade</p>";
+            echo '</div>';
+            echo '</div>';
+            echo '<br><br>';
+
+            echo '<div class="col-md-12">';
+            echo '<div class="col-md-4">';
+                echo '<label for="">Serviço de frete:</label>';
+            echo '</div>';
+            echo '<div class="col-md-8">';
+                echo "<p>$tipoFrete</p>";
             echo '</div>';
             echo '</div>';
             echo '<br><br><br>';

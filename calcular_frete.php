@@ -106,7 +106,7 @@
 			$retorno_lista .= '<span>R$: '.$preco.'</span>';
 			$retorno_lista .= '</div>';
 			$retorno_lista .= '<div class="col-sm-2">';
-			$retorno_lista .= '<button class="btn btn-default escolhaFrete" data-nomeServico="'.$nomeServico.'" data-prazo="'.$prazo.'" data-preco="'.$preco.'" type="button">Selecionar</button>';
+			$retorno_lista .= '<button class="btn btn-default escolhaFrete" data-servico="'.$nomeServico.'" data-prazo="'.$prazo.'" data-preco="'.$preco.'" type="button">Selecionar</button>';
 			$retorno_lista .= '</div>';
 			$retorno_lista .= '</div><br>';
 			}
